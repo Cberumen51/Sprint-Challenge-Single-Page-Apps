@@ -6,17 +6,17 @@ import CharacterList from "./components/CharacterList.js";
 
 
 export default function App() {
-  const [chars, setchars] = useState([])
+  const [chars, setChars] = useState([])
    
 
   return (
     <main>
       <Header />
       <Route path="/" exact>
-        <WelcomePage chars={chars} setchars={setchars} />
+        <WelcomePage chars={chars} setChars={setChars} />
         </Route> 
         <Route path="/character/:id">
-         <CharacterList chars={chars} setchars={setchars} />
+         <CharacterList chars={chars} setChars={setChars} />
          </Route>
     </main>
   );

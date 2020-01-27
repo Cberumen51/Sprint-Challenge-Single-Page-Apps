@@ -3,6 +3,7 @@ import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
+import SearchForm from "./SearchForm";
 
 const InfoWrap = styled.div `
     display: flex;
@@ -35,6 +36,8 @@ export default function CharacterList(props) {
 
   return (
     <section className="character-list">
+          <SearchForm />
+
       <InfoWrap>
         {data.map((char) => {
           return <Link to={`/character/${char.id}`}><CharacterCard key={char.id} char={char} /></Link>
