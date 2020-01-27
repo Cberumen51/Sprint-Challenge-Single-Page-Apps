@@ -26,7 +26,7 @@ export default function CharacterList(props) {
         console.log(res)
       })
       .catch(err => {
-        console.log("errer",err)
+        console.log("error",err)
       })
     
     // TODO: Add API Request here - must run in `useEffect`
